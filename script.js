@@ -14,7 +14,7 @@ const addCartButtons = document.querySelectorAll(".add-cart");
 const revealItems = document.querySelectorAll(".reveal");
 
 // CAMBIA ESTE NUMERO POR TU WHATSAPP
-const phoneNumber = "51999999999";
+const phoneNumber = "51907888975";
 
 let cart = [];
 
