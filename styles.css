@@ -762,6 +762,7 @@ h1, h2, h3, h4, .brand {
   top: calc(100% + 12px);
   right: 0;
   width: 360px;
+  max-width: 360px;
   background: rgba(18, 18, 26, 0.96);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 20px;
@@ -772,7 +773,7 @@ h1, h2, h3, h4, .brand {
   visibility: hidden;
   transform: translateY(10px);
   transition: 0.25s ease;
-  z-index: 80;
+  z-index: 9999;
 }
 
 .cart-dropdown.show {
@@ -937,14 +938,24 @@ h1, h2, h3, h4, .brand {
   }
 
   .cart-dropdown {
-    width: calc(100vw - 24px);
-    max-width: 360px;
+    position: fixed;
+    top: 88px;
     left: 50%;
     right: auto;
+    width: calc(100vw - 24px);
+    max-width: 420px;
+    max-height: calc(100vh - 110px);
+    overflow: hidden;
     transform: translateX(-50%) translateY(10px);
+    border-radius: 22px;
   }
 
   .cart-dropdown.show {
     transform: translateX(-50%) translateY(0);
+  }
+
+  .cart-items {
+    max-height: calc(100vh - 260px);
+    overflow-y: auto;
   }
 }
