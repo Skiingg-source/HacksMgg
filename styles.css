@@ -937,7 +937,14 @@ h1, h2, h3, h4, .brand {
   }
 
   .cart-dropdown {
-    width: min(92vw, 360px);
-    right: -10px;
+    width: calc(100vw - 24px);
+    max-width: 360px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(10px);
+  }
+
+  .cart-dropdown.show {
+    transform: translateX(-50%) translateY(0);
   }
 }
